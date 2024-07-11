@@ -1,0 +1,331 @@
+/* General styles */
+body {
+    font-family: 'Lucida Grande';
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Header styles */
+header {
+    color: white;
+    height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Ensure positioning context for the pseudo-element */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+header::after {
+    content: "";
+    background: url('images1/MJENZI\ b\ 2.png') no-repeat top left;
+    background-size: contain; /* Adjust as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; /* Adjust the size of the image */
+    height: 200px; /* Adjust the size of the image */
+    pointer-events: none; /* Ensure the image does not interfere with user interactions */
+    z-index: 1; /* Ensure it appears on top of other elements if necessary */
+    
+}
+
+header:hover::after {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+header h1 {
+    font-size: 5.0em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(18, 28, 213, 0.5);
+    transition: color 10s ease; /* Smooth transition for text color */
+}
+
+header:hover h1 {
+    color: transparent; /* Change text color on hover */
+    -webkit-text-stroke: 2px #170cb0;
+}
+
+header:hover p {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Navigation styles */
+nav {
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin-left: 40px;
+    list-style: none;
+    display: inline-block;
+
+}
+
+nav ul li a {
+    color: rgb(6, 5, 5);
+    text-decoration: none;
+    font-size: 8px;
+}
+
+nav ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+/* Container styles */
+.container {
+text-align: center;
+}
+.Container.h1 {
+font-size: 160px;
+color: #fff;
+font-weight: 600;
+}
+
+.container a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 17px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.Backvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media(min-aspect-ratio:16/9){
+    .Backvideo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio:16/9){
+    .Backvideo{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.founders{
+    justify-content: space-between;
+    outline: auto;
+}
+
+/* Section styles */
+.company-profile {
+    color: whitesmoke;
+    background: url('images1/profile4.jpg') no-repeat center center/cover;
+    margin-bottom: 50px;
+    padding: 50px 0;
+    height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    transition: background 0.3s ease; /* Smooth transition for background */
+}
+
+.company-profile:hover, .features:hover, .founders:hover {
+    background-color: rgba(230, 236, 237, 0.1); /* Add subtle overlay on hover */
+}
+
+.company-profile h2, .features h2, .founders h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.company-profile:hover h2{
+    color: #121212; /* Change text color on hover */
+}
+
+.company-profile p {
+    font-size: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.company-profile:hover p {
+    opacity: 0.8; /* Reduce opacity on hover */
+    color: #fff;
+}
+
+/* Features section styles */
+.features {
+    background: #f1f1f1;
+}
+
+.features .feature {
+    display: inline-block;
+    width: 30%;
+    margin: 20px 1.5%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.features .feature:hover {
+    transform: translateY(-10px); /* Lift feature on hover */
+}
+
+.features .feature i {
+    font-size: 3em;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.features .feature:hover i {
+    color: #ff6600; /* Change icon color on hover */
+}
+
+.features .feature h3 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.features .feature:hover h3 {
+    color: #ff6600; /* Change text color on hover */
+}
+
+.features .feature p {
+    font-size: 1em;
+    color: #666;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.features .feature:hover p {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Founders section styles */
+.founders .founder-profiles {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.founders .founder {
+    width: 100px;
+    text-align: left;
+    background: #f9f9f9;
+    border-radius: 80px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.founders .founder:hover {
+    transform: translateY(-10px); /* Lift founder profile on hover */
+}
+
+.founders .founder img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.founders .founder:hover img {
+    transform: scale(1.1); /* Scale up image on hover */
+}
+
+.founders .founder h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.founders .founder:hover h3 {
+    color: #1e0ad7; /* Change text color on hover */
+}
+
+.founders .founder p {
+    font-size: 0.9em;
+    color: #666;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.founders .founder:hover p {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+.founders{
+
+}
+
+/* This container will take up the remaining space */
+
+.PARTNERS {
+    width: 100vw;
+    width: 100lvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Distribute the space evenly between the images */
+    align-items: center; /* Align images at the center vertically */
+    padding: 1rem; /* Optional: Add some padding to the container */
+}
+
+.PARTNERS > * {
+    max-height: 5rem; /* Ensure images don't exceed the specified height */
+    flex: 1; /* Ensure images take equal space */
+    margin: 0 1rem; /* Add some margin between images */
+    object-fit: contain; /* Ensure images fit within their allocated space */
+}
+
+/* Footer styles */
+footer {
+    background: #170cb0;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+footer p a:hover {
+    color: #ff6600; /* Change text color on hover */
+}
